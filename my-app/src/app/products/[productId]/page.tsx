@@ -1,4 +1,13 @@
-export default function ProductDetails({ params } : { params: { productId: string } }) {
+interface ProductDetailsProps{
+	params: Promise<{
+		productId: string
+	}>
 
-	return <h1> List all products {params.productId}</h1>
+}
+
+export default async function ProductDetails({ params } : ProductDetailsProps) {
+
+	const { productId } = await params;
+
+	return <h1> List all products {productId}</h1>
 }
