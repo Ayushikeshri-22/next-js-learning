@@ -8,15 +8,16 @@ type Props = {
 
 }
 
-export const generateMetadata = ({params} : Props) : Metadata => {
+// generate dynamic meta data
+export const generateMetadata = ({params} : Props) :Metadata => {
 	return {
-		title: `Product Details ${params.productId}`,
+		title : `Product ${params.productId}`
 	}
 }
 
-export default async function ProductDetails({ params } : Props) {
+export default function ProductDetails({ params } : Props) {
 
-	const { productId } = await params;
+	const { productId } =  params;
 
 	return <h1> List all products {productId}</h1>
 }
