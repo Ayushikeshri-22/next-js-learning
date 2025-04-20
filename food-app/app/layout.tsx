@@ -1,5 +1,9 @@
 import "./globals.css";
 
+export const metadata = {
+  title: "Food App",
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
