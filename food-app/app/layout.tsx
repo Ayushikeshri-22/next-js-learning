@@ -1,4 +1,5 @@
 import "./globals.css";
+import MainHeader from "@/components/main-header";
 
 export const metadata = {
   title: "Food App",
@@ -12,6 +13,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+       <MainHeader />
         {children}
       </body>
     </html>
